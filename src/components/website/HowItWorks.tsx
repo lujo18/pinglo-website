@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { Phone, Smile, BarChart3 } from 'lucide-react'
 
 interface Step {
@@ -14,19 +15,19 @@ const steps: Step[] = [
     number: 1,
     title: 'Pick an Interaction Type',
     description: 'Was it a message, call, or in-person meeting? Choose the type that matches your connection.',
-    icon: <Phone size={44} color=\"#a78bfa\" />,
+    icon: <Phone size={44} color="#a78bfa" />,
   },
   {
     number: 2,
     title: 'Rate the Sentiment',
-    description: 'Log how the interaction wentGood, Neutral, or Bad. Instant visual feedback.',
-    icon: <Smile size={44} color=\"#a78bfa\" />,
+    description: 'Log how the interaction went—Good, Neutral, or Bad. Instant visual feedback.',
+    icon: <Smile size={44} color="#a78bfa" />,
   },
   {
     number: 3,
     title: 'Get Scored & See Insights',
     description: 'Your contact gets a health score. Reconnect with people before relationships fade.',
-    icon: <BarChart3 size={44} color=\"#a78bfa\" />,
+    icon: <BarChart3 size={44} color="#a78bfa" />,
   },
 ]
 
