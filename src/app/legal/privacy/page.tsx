@@ -18,10 +18,10 @@ function PrivacyContent() {
       py={60}
       px={20}
       gap={40}
-      alignItems="center"
+      ai="center"
     >
       {/* Header */}
-      <YStack gap={16} alignItems="center" maxWidth={900}>
+      <YStack gap={16} ai="center" maxWidth={900}>
         <Text fontSize={44} fontWeight="800" textAlign="center" color="$textPrimary">
           Privacy Policy
         </Text>
@@ -185,9 +185,9 @@ function Section({ number, title, content, bullets }: SectionProps) {
       )}
 
       {bullets && (
-        <YStack gap={8} paddingLeft={20}>
+        <YStack gap={8} pl={20}>
           {bullets.map((bullet, i) => (
-            <XStack key={i} gap={12} alignItems="flex-start">
+            <XStack key={i} gap={12} ai="flex-start">
               <Text fontSize={14} color="$accentPrimary" fontWeight="600" flexShrink={0}>
                 •
               </Text>
