@@ -69,8 +69,8 @@ export default function WaitlistSection() {
               <div style={{ display: 'flex', gap: 8, alignItems: 'center', border: '2px solid #6d28d9', borderRadius: 12, paddingLeft: 12, paddingRight: 12, paddingTop: 4, paddingBottom: 4, backgroundColor: '#0f172a' }}>
                 <span style={{ fontSize: 16 }}></span>
                 <input
-                  type=\"email\"
-                  placeholder=\"Enter your email\"
+                  type='email'
+                  placeholder='Enter your email'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   style={{
@@ -94,7 +94,7 @@ export default function WaitlistSection() {
               )}
 
               <button
-                type=\"submit\"
+                type='submit'
                 disabled={loading}
                 onClick={() => handleSubmit({ preventDefault: () => {} } as any)}
                 style={{
