@@ -12,25 +12,25 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: <Target size={40} color=\"#a78bfa\" />,
+    icon: <Target size={40} color="#a78bfa" />,
     title: 'Stay intentional',
     description: 'Make relationships a priority with small, consistent efforts that actually stick.',
     highlight: 'Consistency matters',
   },
   {
-    icon: <Clock size={40} color=\"#a78bfa\" />,
+    icon: <Clock size={40} color="#a78bfa" />,
     title: 'Save time',
     description: 'Cut busywork and spend more meaningful time with the people who matter.',
     highlight: 'More meaningful time',
   },
   {
-    icon: <Heart size={40} color=\"#a78bfa\" />,
+    icon: <Heart size={40} color="#a78bfa" />,
     title: 'Feel confident',
     description: 'A calm, focused experience helps you reach out with clarity and warmth.',
     highlight: 'No overwhelm',
   },
   {
-    icon: <Sparkles size={40} color=\"#a78bfa\" />,
+    icon: <Sparkles size={40} color="#a78bfa" />,
     title: 'Designed for people',
     description: 'Built to support genuine connection instead of noise and distractions.',
     highlight: 'Human-centered',
