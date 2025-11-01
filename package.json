@@ -1,0 +1,45 @@
+{
+  "name": "pinglo-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "contentlayer build && next dev",
+    "build": "contentlayer build && next build",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,json,md}\""
+  },
+  "dependencies": {
+    "@tamagui/config": "^1.135.7",
+    "@tamagui/core": "^1.135.7",
+    "@tamagui/font-inter": "^1.135.7",
+    "axios": "^1.13.1",
+    "contentlayer": "^0.3.4",
+    "firebase": "^12.5.0",
+    "framer-motion": "^12.23.24",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.552.0",
+    "marked": "^16.4.1",
+    "next": "16.0.1",
+    "next-contentlayer": "^0.3.4",
+    "next-mdx-remote": "^5.0.0",
+    "next-seo": "^7.0.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-markdown": "^10.1.0",
+    "tamagui": "^1.135.7",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5"
+  }
+}
