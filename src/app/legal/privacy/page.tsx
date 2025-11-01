@@ -15,8 +15,8 @@ function PrivacyContent() {
     <YStack
       width="100%"
       bg="$color1"
-      paddingVertical={60}
-      paddingHorizontal={20}
+      py={60}
+      px={20}
       gap={40}
       alignItems="center"
     >
