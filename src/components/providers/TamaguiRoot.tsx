@@ -31,9 +31,9 @@ function SiteHeader() {
       zIndex: 50,
       backdropFilter: 'blur(10px)',
     }}>
-      <XStack alignItems="center" justifyContent="space-between" gap="$6">
+      <XStack ai="center" jc="space-between" gap={64}>
         {/* Logo */}
-        <XStack alignItems="center" gap={12}>
+        <XStack ai="center" gap={12}>
           <img 
             src="/assets/icons/splash-icon-light.png" 
             alt="Pinglo Logo"
@@ -45,7 +45,7 @@ function SiteHeader() {
         </XStack>
 
         {/* Navigation */}
-        <XStack gap={64} alignItems="center" display={{ '@media (max-width: 768px)': 'none' }}>
+        <XStack gap={64} ai="center" display={{ '@media (max-width: 768px)': 'none' }}>
           <NavLink href="/#features">Features</NavLink>
           <NavLink href="/#how-it-works">How It Works</NavLink>
           <NavLink href="/blog">Blog</NavLink>
