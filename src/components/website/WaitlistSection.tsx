@@ -1,8 +1,6 @@
 'use client'
 
-import { YStack, XStack, Text, Input, View } from 'tamagui'
 import { useState } from 'react'
-import ButtonA from '../ui/ButtonA'
 
 export default function WaitlistSection() {
   const [email, setEmail] = useState('')
@@ -41,68 +39,38 @@ export default function WaitlistSection() {
   }
 
   return (
-    <YStack
-      width="100%"
-      backgroundColor="$background"
-      paddingVertical={80}
-      paddingHorizontal={20}
-      alignItems="center"
-      gap={32}
-    >
-      <YStack gap={16} alignItems="center" maxWidth={720}>
-        <Text fontSize={14} fontWeight="600" color="$accentPrimary" textTransform="uppercase">
+    <div style={{ width: '100%', backgroundColor: '#0f172a', paddingTop: 80, paddingBottom: 80, paddingLeft: 20, paddingRight: 20, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'center', maxWidth: 720 }}>
+        <span style={{ fontSize: 14, fontWeight: '600', color: '#a78bfa', textTransform: 'uppercase' }}>
           Early Access
-        </Text>
-        <Text fontSize={44} fontWeight="800" textAlign="center" color="$textPrimary">
+        </span>
+        <h2 style={{ fontSize: 44, fontWeight: '800', textAlign: 'center', color: '#f1f5f9', margin: 0 }}>
           Join the Waitlist
-        </Text>
-        <Text fontSize={18} textAlign="center" color="$textSecondary" lineHeight={28}>
+        </h2>
+        <p style={{ fontSize: 18, textAlign: 'center', color: '#cbd5e1', lineHeight: '28px', margin: 0 }}>
           Be the first to know when Pinglo launches. Get instant access to download the app when it's ready.
-        </Text>
-      </YStack>
+        </p>
+      </div>
 
-      <YStack
-        width="100%"
-        maxWidth={500}
-        gap={16}
-        padding={32}
-        backgroundColor="$color2"
-        borderRadius={16}
-        borderWidth={2}
-        borderColor="$accentSecondary"
-      >
+      <div style={{ width: '100%', maxWidth: 500, display: 'flex', flexDirection: 'column', gap: 16, padding: 32, backgroundColor: '#1e293b', borderRadius: 16, border: '2px solid #6d28d9' }}>
         {submitted ? (
-          <YStack gap={12} alignItems="center" padding={20}>
-            <Text fontSize={28} color="$successPrimary">
-              ✓
-            </Text>
-            <Text fontSize={20} fontWeight="700" textAlign="center" color="$textPrimary">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'center', padding: 20 }}>
+            <span style={{ fontSize: 28, color: '#4ade80' }}></span>
+            <h3 style={{ fontSize: 20, fontWeight: '700', textAlign: 'center', color: '#f1f5f9', margin: 0 }}>
               Thanks for signing up!
-            </Text>
-            <Text fontSize={14} textAlign="center" color="$textSecondary">
+            </h3>
+            <p style={{ fontSize: 14, textAlign: 'center', color: '#cbd5e1', margin: 0 }}>
               Check your email for updates and exclusive perks.
-            </Text>
-          </YStack>
+            </p>
+          </div>
         ) : (
           <form onSubmit={handleSubmit} style={{ width: '100%' }}>
-            <YStack gap={16}>
-              <XStack
-                gap={8}
-                alignItems="center"
-                borderWidth={2}
-                borderColor="$accentSecondary"
-                borderRadius={12}
-                paddingHorizontal={12}
-                paddingVertical={4}
-                backgroundColor="$background"
-                focusWithinStyle={{
-                  borderColor: '$accentPrimary',
-                }}
-              >
-                <Text fontSize={16}>📧</Text>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <div style={{ display: 'flex', gap: 8, alignItems: 'center', border: '2px solid #6d28d9', borderRadius: 12, paddingLeft: 12, paddingRight: 12, paddingTop: 4, paddingBottom: 4, backgroundColor: '#0f172a' }}>
+                <span style={{ fontSize: 16 }}></span>
                 <input
-                  type="email"
-                  placeholder="Enter your email"
+                  type=\"email\"
+                  placeholder=\"Enter your email\"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   style={{
@@ -110,23 +78,23 @@ export default function WaitlistSection() {
                     border: 'none',
                     outline: 'none',
                     backgroundColor: 'transparent',
-                    color: '#0f172a',
+                    color: '#f1f5f9',
                     fontSize: 16,
                     fontFamily: 'inherit',
                     padding: '12px 0',
                   }}
                   disabled={loading}
                 />
-              </XStack>
+              </div>
 
               {error && (
-                <Text fontSize={14} color="$errorPrimary">
-                  ✗ {error}
-                </Text>
+                <p style={{ fontSize: 14, color: '#ff6b6b', margin: 0 }}>
+                   {error}
+                </p>
               )}
 
               <button
-                type="submit"
+                type=\"submit\"
                 disabled={loading}
                 onClick={() => handleSubmit({ preventDefault: () => {} } as any)}
                 style={{
@@ -151,14 +119,14 @@ export default function WaitlistSection() {
               >
                 {loading ? 'Joining...' : 'Join Waitlist'}
               </button>
-            </YStack>
+            </div>
           </form>
         )}
-      </YStack>
+      </div>
 
-      <Text fontSize={13} color="$textSecondary" textAlign="center" maxWidth={500}>
+      <p style={{ fontSize: 13, color: '#cbd5e1', textAlign: 'center', maxWidth: 500, margin: 0 }}>
         We respect your privacy. No spam, ever. Unsubscribe at any time.
-      </Text>
-    </YStack>
+      </p>
+    </div>
   )
 }
