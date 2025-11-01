@@ -73,7 +73,7 @@ function FeatureCard({ feature }: { feature: Feature }) {
         display: 'flex',
         flexDirection: 'column',
         gap: 16,
-        border: \2px solid \\,
+        border: `2px solid ${isHovered ? '#a78bfa' : '#6d28d9'}`,
         cursor: 'pointer',
         transition: 'all 0.3s',
       }}
