@@ -1,40 +1,50 @@
 'use client'
 
-import { YStack, XStack, Text } from 'tamagui'
-
 export default function Hero() {
   return (
-    <YStack
-      width="100%"
-      backgroundColor="$color1"
-      paddingVertical={80}
-      paddingHorizontal={20}
-      alignItems="center"
-      gap={32}
-      minHeight="100vh"
-      justifyContent="center"
+    <div
+      style={{
+        width: '100%',
+        backgroundColor: '#0f172a',
+        paddingTop: 80,
+        paddingBottom: 80,
+        paddingLeft: 20,
+        paddingRight: 20,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 32,
+        minHeight: '100vh',
+        justifyContent: 'center',
+      }}
     >
-      <YStack gap={20} alignItems="center" maxWidth={720}>
-        <Text
-          fontSize={56}
-          fontWeight="800"
-          textAlign="center"
-          lineHeight={64}
-          color="$textPrimary"
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 20, alignItems: 'center', maxWidth: 720 }}>
+        <h1
+          style={{
+            fontSize: 56,
+            fontWeight: '800',
+            textAlign: 'center',
+            lineHeight: '64px',
+            color: '#f1f5f9',
+            margin: 0,
+          }}
         >
           Keep the people who matter close.
-        </Text>
-        <Text
-          fontSize={20}
-          textAlign="center"
-          color="$textSecondary"
-          lineHeight={28}
+        </h1>
+        <p
+          style={{
+            fontSize: 20,
+            textAlign: 'center',
+            color: '#cbd5e1',
+            lineHeight: '28px',
+            margin: 0,
+          }}
         >
-          A simple way to stay in touch—without the clutter.
-        </Text>
-      </YStack>
+          A simple way to stay in touchwithout the clutter.
+        </p>
+      </div>
 
-      <XStack gap={12} alignItems="center" flexWrap="wrap" justifyContent="center">
+      <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
         <button
           onClick={() => alert('Download iOS')}
           style={{
@@ -53,23 +63,26 @@ export default function Hero() {
         >
           Download on App Store
         </button>
-      </XStack>
+      </div>
 
-      <YStack
-        marginTop={40}
-        width="100%"
-        maxWidth={600}
-        height={400}
-        backgroundColor="$color2"
-        borderRadius={20}
-        opacity={0.5}
-        justifyContent="center"
-        alignItems="center"
+      <div
+        style={{
+          marginTop: 40,
+          width: '100%',
+          maxWidth: 600,
+          height: 400,
+          backgroundColor: '#1e293b',
+          borderRadius: 20,
+          opacity: 0.5,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
       >
-        <Text fontSize={18} color="$textSecondary" textAlign="center">
+        <p style={{ fontSize: 18, color: '#cbd5e1', textAlign: 'center', margin: 0 }}>
           [App Preview Image]
-        </Text>
-      </YStack>
-    </YStack>
+        </p>
+      </div>
+    </div>
   )
 }
