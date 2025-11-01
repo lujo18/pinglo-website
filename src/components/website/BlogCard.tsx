@@ -18,7 +18,7 @@ export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link href={`/blog/${post.slug}`}>
       <YStack
-        backgroundColor="$color2"
+        bg="$color2"
         borderRadius={16}
         padding={32}
         gap={16}
@@ -26,7 +26,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         borderColor="$accentSecondary"
         hoverStyle={{
           borderColor: '$accentPrimary',
-          backgroundColor: '$color3',
+          bg: '$color3',
           transform: 'translateY(-4px)',
         }}
         cursor="pointer"
