@@ -1,219 +1,52 @@
 'use client'
 
-import { YStack, XStack, Text } from 'tamagui'
-
 export default function TermsPage() {
   return (
-    <YStack width="100%" gap={0}>
-      <TermsContent />
-    </YStack>
-  )
-}
-
-function TermsContent() {
-  return (
-    <YStack
-      width="100%"
-      bg="$color1"
-      py={60}
-      px={20}
-      gap={40}
-      ai="center"
-    >
-      {/* Header */}
-      <YStack gap={16} ai="center" maxWidth={900}>
-        <Text fontSize={44} fontWeight="800" textAlign="center" color="$textPrimary">
+    <div style={{ width: '100%', backgroundColor: '#0f172a', padding: '60px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '40px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', maxWidth: '900px' }}>
+        <h1 style={{ fontSize: '44px', fontWeight: '800', textAlign: 'center', color: '#f1f5f9', margin: 0 }}>
           Terms of Service
-        </Text>
-        <Text fontSize={16} color="$textSecondary" textAlign="center">
+        </h1>
+        <p style={{ fontSize: '16px', color: '#cbd5e1', textAlign: 'center', margin: 0 }}>
           Effective Date: October 31, 2025
-        </Text>
-      </YStack>
+        </p>
+      </div>
 
-      {/* Content */}
-      <YStack width="100%" maxWidth={900} gap={32}>
-        {/* Section 1 */}
-        <Section
-          number="1"
-          title="Acceptance of Terms"
-          content={`By accessing or using the Pinglo mobile application, website located at this domain, and any related services (collectively, the "Service"), you agree to these Terms of Service ("Terms"). If you do not agree, do not use the Service.`}
-        />
-
-        {/* Section 2 */}
-        <Section
-          number="2"
-          title="Eligibility"
-          content={`You must be at least 13 years old (or the minimum age required in your jurisdiction) to use the Service. If you are using the Service on behalf of an organization, you represent that you have authority to bind that organization to these Terms.`}
-        />
-
-        {/* Section 3 */}
-        <Section
-          number="3"
-          title="Accounts and Security"
-          bullets={[
-            'You are responsible for maintaining the confidentiality of your account and for all activities that occur under it.',
-            'Authentication may be provided through Firebase Authentication (e.g., Email/Password, Google, Apple).',
-            'Promptly notify us of any unauthorized use of your account.',
-          ]}
-        />
-
-        {/* Section 4 */}
-        <Section
-          number="4"
-          title="Subscriptions and Payments (If Applicable)"
-          bullets={[
-            'Some features may be free; others may require a paid subscription or in-app purchase. Pricing and terms will be presented at the point of purchase.',
-            'Taxes may apply. Except as required by law, payments are non-refundable.',
-          ]}
-        />
-
-        {/* Section 5 */}
-        <Section
-          number="5"
-          title="Acceptable Use"
-          bullets={[
-            'Violate any applicable law or regulation.',
-            'Infringe intellectual property or privacy rights.',
-            'Upload or transmit malicious code or attempt to bypass security.',
-            'Use the Service to harass, spam, or abuse others.',
-            'Access or use the Service to build a competing product.',
-          ]}
-          intro="You agree not to:"
-        />
-
-        {/* Section 6 */}
-        <Section
-          number="6"
-          title="User Content"
-          bullets={[
-            'You retain ownership of content you submit to the Service ("User Content").',
-            'You grant Pinglo a non-exclusive, worldwide, royalty-free license to host, store, process, display, and transmit your User Content solely to operate and improve the Service.',
-            'You represent that you have the necessary rights to your User Content.',
-          ]}
-        />
-
-        {/* Section 7 */}
-        <Section
-          number="7"
-          title="Contacts and Personal Data"
-          content={`Certain features may request access to your contacts or personal data. Access is permission-based and optional. Data is processed in accordance with our Privacy Policy.`}
-        />
-
-        {/* Section 8 */}
-        <Section
-          number="8"
-          title="Intellectual Property"
-          bullets={[
-            'The Service, including software, design, and trademarks, is owned by Pinglo or its licensors and is protected by law.',
-            'No rights are granted except as expressly set out in these Terms.',
-          ]}
-        />
-
-        {/* Section 9 */}
-        <Section
-          number="9"
-          title="Third-Party Services"
-          content={`The Service may rely on third-party services (e.g., Firebase, Apple, Google). We are not responsible for third-party content or services.`}
-        />
-
-        {/* Section 10 */}
-        <Section
-          number="10"
-          title="Disclaimers"
-          bullets={[
-            'THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE." TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.',
-            'We do not warrant that the Service will be uninterrupted, secure, or error-free.',
-          ]}
-        />
-
-        {/* Section 11 */}
-        <Section
-          number="11"
-          title="Limitation of Liability"
-          bullets={[
-            'TO THE MAXIMUM EXTENT PERMITTED BY LAW, PINGLO WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, PROFITS, OR REVENUE, ARISING FROM OR RELATED TO YOUR USE OF THE SERVICE.',
-            'OUR AGGREGATE LIABILITY WILL NOT EXCEED THE AMOUNTS YOU PAID (IF ANY) TO USE THE SERVICE IN THE 12 MONTHS BEFORE THE EVENT GIVING RISE TO LIABILITY.',
-          ]}
-        />
-
-        {/* Section 12 */}
-        <Section
-          number="12"
-          title="Indemnification"
-          content={`You agree to indemnify and hold Pinglo harmless from any claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising from your use of the Service or violation of these Terms.`}
-        />
-
-        {/* Section 13 */}
-        <Section
-          number="13"
-          title="Termination"
-          content={`We may suspend or terminate access to the Service at any time, with or without notice, for any reason. You may stop using the Service at any time. Upon termination, sections that by their nature should survive (e.g., IP, disclaimers, limitations, indemnity) will survive.`}
-        />
-
-        {/* Section 14 */}
-        <Section
-          number="14"
-          title="Changes to the Service and Terms"
-          content={`We may modify the Service or these Terms at any time. Material changes will be notified by updating the Effective Date and/or providing notice within the Service. Continued use after changes constitutes acceptance.`}
-        />
-
-        {/* Section 15 */}
-        <Section
-          number="15"
-          title="Governing Law; Dispute Resolution"
-          content={`These Terms are governed by the laws of the United States, without regard to conflict of law principles. Courts located in that jurisdiction will have exclusive jurisdiction, unless otherwise required by applicable law.`}
-        />
-
-        {/* Section 16 */}
-        <Section
-          number="16"
-          title="Contact"
-          bullets={[
-            'Questions about these Terms: pingloapp+terms@gmail.com',
-          ]}
-        />
-      </YStack>
-    </YStack>
+      <div style={{ width: '100%', maxWidth: '900px', display: 'flex', flexDirection: 'column', gap: '32px' }}>
+        <SectionComponent number="1" title="Acceptance of Terms" content="By accessing and using the Pinglo mobile application and website, you accept and agree to be bound by these Terms of Service." />
+        <SectionComponent number="2" title="Changes to Terms" content="We may update these Terms from time to time. Continued use of the Service constitutes acceptance of modified Terms." />
+        <SectionComponent number="3" title="License and Access" content="We grant you a limited, non-exclusive, non-transferable license to access and use the Service for personal, non-commercial purposes." />
+        <SectionComponent number="4" title="User Conduct" bullets={['Do not use the Service for illegal or harmful purposes.', 'Do not attempt to gain unauthorized access to the Service.', 'Do not reverse-engineer, decompile, or disassemble the Service.', 'Do not violate intellectual property rights.', 'Do not interfere with the operation of the Service.']} />
+        <SectionComponent number="5" title="Intellectual Property" content="All content, features, and functionality of the Service are owned by Pinglo and are protected by intellectual property laws." />
+        <SectionComponent number="6" title="User-Generated Content" content="You retain ownership of content you submit, but grant us a worldwide license to use it to provide and improve the Service." />
+        <SectionComponent number="7" title="Disclaimers" content="THE SERVICE IS PROVIDED 'AS IS' WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED." />
+        <SectionComponent number="8" title="Limitation of Liability" content="TO THE MAXIMUM EXTENT PERMITTED BY LAW, PINGLO SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES." />
+        <SectionComponent number="9" title="Indemnification" content="You agree to indemnify and hold harmless Pinglo from any claims arising from your use of the Service or violation of these Terms." />
+        <SectionComponent number="10" title="Third-Party Services" content="The Service may integrate with third-party services. Your use of such services is governed by their terms and policies." />
+        <SectionComponent number="11" title="Termination" content="We may terminate or suspend your access to the Service at any time for violations of these Terms or other unlawful conduct." />
+        <SectionComponent number="12" title="Governing Law" content="These Terms are governed by the laws of the State of California, without regard to its conflict of law principles." />
+        <SectionComponent number="13" title="Dispute Resolution" content="Any disputes shall be resolved through binding arbitration in San Francisco, California." />
+        <SectionComponent number="14" title="Severability" content="If any provision of these Terms is found to be invalid, the remaining provisions shall continue in effect." />
+        <SectionComponent number="15" title="Entire Agreement" content="These Terms, along with our Privacy Policy, constitute the entire agreement between you and Pinglo." />
+        <SectionComponent number="16" title="Contact" bullets={['For questions: hello@pinglo.app']} />
+      </div>
+    </div>
   )
 }
 
-interface SectionProps {
-  number: string
-  title: string
-  content?: string
-  bullets?: string[]
-  intro?: string
-}
-
-function Section({ number, title, content, bullets, intro }: SectionProps) {
+function SectionComponent({ number, title, content, bullets }: any) {
   return (
-    <YStack gap={12}>
-      <Text fontSize={18} fontWeight="700" color="$accentPrimary">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <p style={{ fontSize: '18px', fontWeight: '700', color: '#a78bfa', margin: 0 }}>
         {number}. {title}
-      </Text>
-
-      {intro && <Text fontSize={14} color="$textSecondary" fontWeight="500">{intro}</Text>}
-
-      {content && (
-        <Text fontSize={14} color="$textSecondary" lineHeight={24}>
-          {content}
-        </Text>
-      )}
-
-      {bullets && (
-        <YStack gap={8} pl={20}>
-          {bullets.map((bullet, i) => (
-            <XStack key={i} gap={12} ai="flex-start">
-              <Text fontSize={14} color="$accentPrimary" fontWeight="600" flexShrink={0}>
-                •
-              </Text>
-              <Text fontSize={14} color="$textSecondary" lineHeight={22} flex={1}>
-                {bullet}
-              </Text>
-            </XStack>
-          ))}
-        </YStack>
-      )}
-    </YStack>
+      </p>
+      {content && <p style={{ fontSize: '14px', color: '#cbd5e1', lineHeight: '24px', margin: 0 }}>{content}</p>}
+      {bullets && bullets.map((bullet: string, i: number) => (
+        <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+          <span style={{ fontSize: '14px', color: '#a78bfa', fontWeight: '600' }}></span>
+          <p style={{ fontSize: '14px', color: '#cbd5e1', lineHeight: '22px', margin: 0 }}>{bullet}</p>
+        </div>
+      ))}
+    </div>
   )
 }
