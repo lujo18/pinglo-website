@@ -15,7 +15,7 @@ export default function BlogCard({ post }: BlogCardProps) {
   })
 
   return (
-    <Link href={/blog/}>
+    <Link href={`/blog/${post.slug}`}>
       <div style={{ backgroundColor: '#1e293b', borderRadius: 16, padding: 32, gap: 16, borderWidth: 2, borderColor: '#6d28d9', display: 'flex', flexDirection: 'column', cursor: 'pointer', transition: 'all 0.3s', border: '2px solid #6d28d9' }} onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = '#a78bfa'; (e.currentTarget as HTMLElement).style.backgroundColor = '#334155'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = '#6d28d9'; (e.currentTarget as HTMLElement).style.backgroundColor = '#1e293b'; (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <span style={{ fontSize: 12, fontWeight: 600, color: '#a78bfa', textTransform: 'uppercase' }}>
